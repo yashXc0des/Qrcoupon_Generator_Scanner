@@ -4,6 +4,8 @@ import 'package:qr_flutter/qr_flutter.dart';
 import '../models/coupon.dart';
 
 class CouponListPage extends StatefulWidget {
+  const CouponListPage({super.key});
+
   @override
   _CouponListPageState createState() => _CouponListPageState();
 }
@@ -22,6 +24,7 @@ class _CouponListPageState extends State<CouponListPage> {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: TextField(
+
               decoration: InputDecoration(
                 labelText: 'Search',
                 prefixIcon: Icon(Icons.search),
@@ -56,15 +59,13 @@ class _CouponListPageState extends State<CouponListPage> {
                   .snapshots(),
               builder: (context, snapshot) {
                 if (snapshot.connectionState == ConnectionState.waiting) {
-                  return Center(child: CircularProgressIndicator());
+                  return const Center(child: CircularProgressIndicator());
                 }
 
                 if (!snapshot.hasData || snapshot.data!.docs.isEmpty) {
-                  return Center(child: Text('No coupons found'));
+                  return const Center(child: Text('No coupons found'));
                 }
-
                 var coupons = snapshot.data!.docs.map((doc) => Coupon.fromMap(doc.data() as Map<String, dynamic>)).toList();
-
                 return ListView.builder(
                   itemCount: coupons.length,
                   itemBuilder: (context, index) {
