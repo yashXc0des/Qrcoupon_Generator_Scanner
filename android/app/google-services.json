@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "120526153221",
+    "project_id": "cool-couponapp",
+    "storage_bucket": "cool-couponapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:120526153221:android:a65b512788acb228899e6c",
+        "android_client_info": {
+          "package_name": "com.example.couponapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8oUBCSlwy9NC8ezQs40o4RnWW76p3Wi4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
