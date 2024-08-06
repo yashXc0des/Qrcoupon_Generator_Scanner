@@ -53,8 +53,7 @@ class _CouponListPageState extends State<CouponListPage> {
           Expanded(
             child: StreamBuilder<QuerySnapshot>(
               stream: _firestore.collection('coupons')
-                  .where('uniqueID', isGreaterThanOrEqualTo: _searchQuery)
-                  .where('uniqueID', isLessThanOrEqualTo: _searchQuery + '\uf8ff')
+                   //.where('uniqueID', isEqualTo: _searchQuery)
                   .where('claimed', isEqualTo: _showClaimed)
                   .snapshots(),
               builder: (context, snapshot) {
